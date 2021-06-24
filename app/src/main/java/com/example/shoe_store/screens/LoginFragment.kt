@@ -21,8 +21,6 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
-        Toast.makeText(requireActivity(),binding.buttonLogin.text, Toast.LENGTH_LONG).show()
-
 
         binding.buttonLogin.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_welcome)

@@ -8,25 +8,24 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import com.example.shoe_store.R
-import com.example.shoe_store.databinding.FragmentWelcomeBinding
+import com.example.shoe_store.databinding.FragmentShoeDetailBinding
 
+class ShoeDetailFragment : Fragment() {
 
-class WelcomeFragment : Fragment() {
-
-    private lateinit var binding: FragmentWelcomeBinding
+    private lateinit var binding: FragmentShoeDetailBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_welcome, container, false)
-        binding.buttonInstructions.setOnClickListener {
-            findNavController().navigate(R.id.action_welcome_to_instructionsFragment)
-        }
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_detail, container, false)
 
+        binding.buttonSave.setOnClickListener {
+            findNavController().navigate(R.id.action_shoeDetailFragment_to_shoeListFragment)
+        }
         return binding.root
     }
+
 
 
 }
