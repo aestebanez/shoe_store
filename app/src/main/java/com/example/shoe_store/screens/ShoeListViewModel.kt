@@ -17,10 +17,14 @@ class ShoeListViewModel : ViewModel() {
     val shoeSaved: LiveData<Boolean>
         get() = _shoeSaved
 
-    var currentShoe: Shoe? = null
+    fun onEventSavedShoe(){
+        _shoeSaved.value = null
+    }
+
+    var curShoe: Shoe? = null
 
     fun createNewShoe(){
-        currentShoe = Shoe("", 1,"","")
+        curShoe = Shoe("", 1,"","")
     }
 
     fun saveShoe(){
@@ -30,7 +34,7 @@ class ShoeListViewModel : ViewModel() {
             tempShoes.addAll(it)
         }
 
-        currentShoe?.let {
+        curShoe?.let {
             tempShoes.add(it)
         }
         _shoes.value = tempShoes
