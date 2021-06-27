@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".screens.ShoeListFragment" >
-
+        <!--    Used constraint layout to position the scrollview.-->
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/button_add_shoe"
             android:layout_width="wrap_content"
@@ -18,7 +18,7 @@
             android:src="@android:drawable/ic_input_add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
-
+<!--        user scroll view and linear layout due to this being just a long list of items-->
         <ScrollView
             android:layout_width="409dp"
             android:layout_height="639dp"

@@ -17,4 +17,5 @@
     <string name="text_label_size">Size: </string>
     <string name="text_label_description">Description: </string>
     <string name="button_save">SAVE</string>
+    <string name="title_logout">Logout</string>
 </resources>

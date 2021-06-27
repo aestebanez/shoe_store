@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <!--    Used constrain layout to position elements that compose a shoe easier.-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_card"
         android:layout_width="match_parent"
@@ -62,9 +62,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="Size"
+                    android:text="Size: "
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tex_shoe_brand" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
